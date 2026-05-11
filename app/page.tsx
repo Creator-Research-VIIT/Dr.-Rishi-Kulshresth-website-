@@ -2,7 +2,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Award, BookOpen, Building2, CheckCircle, FileText, Globe, Lightbulb, Linkedin, Scale, Shield, Target, Users, Zap } from 'lucide-react'
+import { ArrowRight, Award, BookOpen, Building2, CheckCircle, FileText, Globe, Lightbulb, Linkedin, Scale, Search, Shield, Target, Users, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -43,6 +43,12 @@ export default function Home() {
       title: 'Training & Workshops',
       description: 'Professional training for in-house sales teams, legal counsels, and operational personnel.',
       link: '/services#training'
+    },
+    {
+      icon: Search,
+      title: 'On-site Patent Investigations',
+      description: 'On-site investigations with evidence procurement and expert testimony in Court for patent infringement cases.',
+      link: '/services#onsite-patent-investigations'
     }
   ]
 

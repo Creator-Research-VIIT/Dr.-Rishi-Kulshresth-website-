@@ -1,7 +1,7 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Link from 'next/link'
-import { ArrowRight, Award, BookOpen, Briefcase, CheckCircle, FileText, Globe, Lightbulb, Scale, Shield, Target, Users, Zap, Eye, TrendingUp, AlertCircle, Clock } from 'lucide-react'
+import { ArrowRight, Award, BookOpen, Briefcase, CheckCircle, FileText, Globe, Lightbulb, Scale, Search, Shield, Target, Users, Zap, Eye, TrendingUp, AlertCircle, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
@@ -103,6 +103,22 @@ export default function Services() {
         'Best practices sharing',
         'Case study presentations',
         'Customized training modules for corporate sectors'
+      ]
+    },
+    {
+      id: 'onsite-patent-investigations',
+      icon: Search,
+      title: 'On-site Patent Investigations with Evidence Procurement',
+      description: 'We conduct on-site patent investigations to gather solid, admissible evidence of infringement, and provide expert testimony in Court proceedings.',
+      benefits: [
+        'Comprehensive on-site investigation at infringer premises',
+        'Systematic evidence procurement and documentation',
+        'Chain of custody maintained for all collected evidence',
+        'Expert witness testimony in civil and criminal courts',
+        'Affidavit and deposition preparation for court proceedings',
+        'Coordination with legal counsels during trial',
+        'Attendance and representation in court hearings',
+        'Detailed investigation reports for judicial use'
       ]
     }
   ]
