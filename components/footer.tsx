@@ -99,13 +99,13 @@ export default function Footer() {
             <h3 className="font-semibold mb-4 text-primary-foreground">Contact</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="tel:+919876543210" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919999853567" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  +91 99998 53567
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@drrishikulshresth.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  contact@drrishikulshresth.com
+                <a href="mailto:drrishikulshresth@gmail.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  drrishikulshresth@gmail.com
                 </a>
               </li>
               <li className="text-primary-foreground/80">

@@ -91,18 +91,14 @@ export default function Contact() {
       icon: Phone,
       title: 'Phone',
       details: [
-        '+91 11 4567 8900',
-        '+91 98765 43210 (Mobile)',
-        'Toll Free: 1800 123 4567'
+        '+91 99998 53567 (Mobile)',
       ]
     },
     {
       icon: Mail,
       title: 'Email',
       details: [
-        'info@drrishikulshresth.com',
-        'patents@drrishikulshresth.com',
-        'trademarks@drrishikulshresth.com'
+        'drrishikulshresth@gmail.com',
       ]
     },
     {
@@ -121,7 +117,7 @@ export default function Contact() {
       city: 'New Delhi',
       type: 'Head Office',
       address: 'B-123, IP Tower, Connaught Place',
-      phone: '+91 11 4567 8900'
+      phone: '+91 99998 53567'
     },
     {
       city: 'Mumbai',
