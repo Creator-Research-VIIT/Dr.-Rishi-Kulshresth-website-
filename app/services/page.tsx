@@ -10,115 +10,147 @@ import { Badge } from '@/components/ui/badge'
 export default function Services() {
   const services = [
     {
-      id: 'market-research',
-      icon: Target,
-      title: 'Market Survey & Research',
-      description: 'We conduct thorough pre-raid online and offline surveys and research to ascertain the ground realities regarding the availability of counterfeits.',
-      benefits: [
-        'Comprehensive online market surveillance',
-        'Ground-level offline surveys and investigations',
-        'Counterfeit availability assessment',
-        'Evidence collection and documentation',
-        'Detailed market intelligence reports',
-        'Identification of distribution networks',
-        'Geographic spread analysis of counterfeits',
-        'Regular monitoring and updates'
-      ]
-    },
-    {
-      id: 'action-planning',
-      icon: Lightbulb,
-      title: 'Designing the Best Plan of Action',
-      description: 'We use our experience and prepare an action plan with possible timelines to carry out the operation successfully. We do not conduct a raid unless we are sure. We advise the client on the best course of action for each case.',
-      benefits: [
-        'Customized action plans with timelines',
-        'Best course of action recommendations',
-        'Cease & Desist notice preparation and dispatch',
-        'Civil injunction case preparation',
-        'Criminal case strategy development',
-        'Complete confidentiality maintained',
-        'No local involvement in sensitive operations - we never inform or involve local state staff and dealers regarding raids in their area',
-        'FIR Complainant services provided unless required otherwise'
-      ]
-    },
-    {
-      id: 'enforcement',
+      id: 'brand-protection',
       icon: Shield,
-      title: 'IPR Enforcement & Anti-Counterfeiting',
-      description: 'We are competent in filing anti-infringement FIRs, sending Cease & Desist Notices and filing relevant civil and criminal court cases anywhere in India.',
+      title: 'Brand Protection',
+      description: 'Comprehensive brand protection strategies to safeguard your intellectual property, trademarks, and brand identity against counterfeiting and infringement across India.',
       benefits: [
-        'Filing anti-infringement FIRs across India',
-        'Coordinated raid operations nationwide',
-        'Evidence-based solid legal approach',
-        'Experienced enforcement officer team',
-        'Brilliant pan-India associate network',
-        'Operations conducted only when certain of success',
-        'Complainant presence in almost all raids',
-        'Specialized in dealing with enforcement authorities at all levels strictly within the confines of the law'
+        'Holistic brand protection strategy development',
+        'Trademark monitoring and enforcement',
+        'Anti-counterfeiting operations across India',
+        'Market surveillance for brand violations',
+        'Cease & Desist notices to infringers',
+        'Civil and criminal case filing',
+        'Complete post-action follow-up',
+        'Pan-India associate network for rapid response'
       ]
     },
     {
-      id: 'post-raid',
+      id: 'corporate-consultancy',
+      icon: Briefcase,
+      title: 'Corporate Consultancy',
+      description: 'Expert IPR and brand protection consultancy for corporates, helping businesses build robust IP strategies, manage risks, and protect their competitive advantages.',
+      benefits: [
+        'IPR portfolio assessment and strategy',
+        'Risk identification and mitigation planning',
+        'Regulatory compliance advisory',
+        'Customized IP protection frameworks',
+        'Due diligence for IP transactions',
+        'Brand audit and gap analysis',
+        'Guidance on anti-infringement best practices',
+        'Ongoing advisory and support retainers'
+      ]
+    },
+    {
+      id: 'pan-india-raids',
+      icon: Target,
+      title: 'Pan India Anti-Infringement Raids',
+      description: 'Coordinated anti-infringement raid operations conducted across all states and territories of India, with experienced enforcement officers and a strong associate network.',
+      benefits: [
+        'Coordinated raids across all Indian states',
+        'Experienced enforcement officers leading operations',
+        'Pre-raid market surveys and intelligence gathering',
+        'Complete confidentiality – no local involvement',
+        'FIR filing and complainant representation',
+        'Evidence procurement and documentation',
+        'Liaison with police and enforcement authorities',
+        'Operations conducted only when certain of success'
+      ]
+    },
+    {
+      id: 'pan-india-civil-suits',
       icon: Scale,
-      title: 'Post Raid Support',
-      description: 'We specialize in dealing with enforcement authorities at all levels strictly within the confines of the law. We do a complete post-raid follow-up in Police Stations and Courts until the case\'s conclusion.',
+      title: 'Pan India Anti-Infringement Civil Suits',
+      description: 'Filing and management of civil infringement suits including injunctions, damages, and account of profits against counterfeiters and infringers anywhere in India.',
       benefits: [
-        'Regular follow-up in Police Stations',
-        'Court appearance and representation',
-        'Case tracking until conclusion',
-        'Documentation and evidence management',
-        'Coordination with law enforcement',
-        'Status updates to clients',
-        'Legal compliance throughout the process',
-        'Strictly within the confines of the law'
+        'Civil injunction case preparation and filing',
+        'Applications for ex-parte ad interim injunctions',
+        'Damages and account of profits claims',
+        'Court representation through pan-India associates',
+        'Evidence affidavit and pleadings drafting',
+        'Case strategy and advisory from filing to conclusion',
+        'Regular status updates and case management',
+        'Enforcement of court orders against infringers'
       ]
     },
     {
-      id: 'monitoring',
+      id: 'legal-metrology',
       icon: FileText,
-      title: 'Regular Monitoring',
-      description: 'We have a red list which includes details of all infringers of our clients which we handle. Many such infringers may have been sent a Cease & Desist notice only. We then regularly monitor these miscreants online and offline. We also specialize in stopping lookalike brands.',
+      title: 'Legal Metrology Consultancy',
+      description: 'Specialist consultancy on Legal Metrology laws and compliance, ensuring your products and packaging meet all statutory requirements and protecting against violations.',
       benefits: [
-        'Comprehensive red list of all infringers',
-        'Regular online and offline monitoring',
-        'Cease & Desist notice tracking',
-        'Lookalike brand detection and action',
-        'Continuous market surveillance',
-        'Infringer activity monitoring',
-        'Proactive threat identification',
-        'Quick response to new violations'
+        'Legal Metrology Act compliance advisory',
+        'Packaging and labelling requirement review',
+        'Weights and measures regulatory guidance',
+        'Inspection and raid support for metrology violations',
+        'Response to legal metrology notices',
+        'Training on Legal Metrology compliance',
+        'Liaison with Legal Metrology authorities',
+        'Documentation and record-keeping guidance'
       ]
     },
     {
-      id: 'training',
-      icon: Users,
-      title: 'Training & Workshops',
-      description: 'We provide training and hold workshops to benefit in-house sales teams, legal counsels, law and operational personnel in corporate sectors.',
-      benefits: [
-        'In-house sales team training',
-        'Legal counsel education programs',
-        'Law enforcement personnel workshops',
-        'Operational staff training sessions',
-        'IPR awareness programs',
-        'Best practices sharing',
-        'Case study presentations',
-        'Customized training modules for corporate sectors'
-      ]
-    },
-    {
-      id: 'onsite-patent-investigations',
+      id: 'patent-infringement-investigations',
       icon: Search,
-      title: 'On-site Patent Investigations with Evidence Procurement',
-      description: 'We conduct on-site patent investigations to gather solid, admissible evidence of infringement, and provide expert testimony in Court proceedings.',
+      title: 'Patent Infringement Ground Investigations',
+      description: 'In-depth ground-level investigations to detect and document patent infringement, procure admissible evidence, and support legal proceedings in courts.',
       benefits: [
-        'Comprehensive on-site investigation at infringer premises',
+        'On-site investigation at infringer premises',
         'Systematic evidence procurement and documentation',
-        'Chain of custody maintained for all collected evidence',
+        'Chain of custody maintained for all evidence',
         'Expert witness testimony in civil and criminal courts',
-        'Affidavit and deposition preparation for court proceedings',
+        'Affidavit and deposition preparation',
         'Coordination with legal counsels during trial',
         'Attendance and representation in court hearings',
         'Detailed investigation reports for judicial use'
+      ]
+    },
+    {
+      id: 'corporate-team-training',
+      icon: Users,
+      title: 'Training & Sensitising Corporate Teams on Brand Protection / IPR',
+      description: 'Specialized training programs to educate and sensitise corporate teams – sales, legal, operations – on brand protection strategies and IPR laws.',
+      benefits: [
+        'Customized training modules for corporate teams',
+        'Brand protection awareness sessions',
+        'IPR law fundamentals and best practices',
+        'Identifying and reporting infringement',
+        'In-house sales and legal team workshops',
+        'Operational staff sensitisation programs',
+        'Case study-based practical learning',
+        'Post-training assessment and certification'
+      ]
+    },
+    {
+      id: 'ipr-lectures',
+      icon: BookOpen,
+      title: 'Lectures on IPR Law at All Levels',
+      description: 'Expert lectures and seminars on Intellectual Property Rights law delivered to students, academia, government bodies, and industry at all levels.',
+      benefits: [
+        'Lectures at universities and law schools',
+        'Seminars for industry associations',
+        'Government and enforcement agency training',
+        'Student workshops on IPR fundamentals',
+        'Guest lectures and keynote addresses',
+        'Webinars and online sessions',
+        'Customized content for each audience level',
+        'Practical insights from real case experience'
+      ]
+    },
+    {
+      id: 'legal-advisers-advocates',
+      icon: Lightbulb,
+      title: 'Legal Advisers and Advocates',
+      description: 'A dedicated team of experienced legal advisers and advocates providing comprehensive legal counsel and representation on all matters of IPR and brand protection.',
+      benefits: [
+        'Expert legal advice on IPR matters',
+        'Representation in civil and criminal courts',
+        'Drafting of legal notices and pleadings',
+        'Cease & Desist notice preparation',
+        'Strategic legal counsel for brand protection',
+        'Liaison with enforcement authorities',
+        'Pan-India network of associate advocates',
+        'Complete case management from filing to conclusion'
       ]
     }
   ]

@@ -2,53 +2,65 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Award, BookOpen, Building2, CheckCircle, FileText, Globe, Lightbulb, Linkedin, Scale, Search, Shield, Target, Users, Zap } from 'lucide-react'
+import { ArrowRight, Award, BookOpen, Briefcase, Building2, CheckCircle, FileText, Globe, Lightbulb, Linkedin, Scale, Search, Shield, Target, Users, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function Home() {
   const services = [
     {
-      icon: Target,
-      title: 'Market Survey & Research',
-      description: 'Thorough pre-raid online and offline surveys to ascertain ground realities regarding counterfeit availability.',
-      link: '/services#market-research'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Strategic Action Planning',
-      description: 'Experience-driven master plans with timelines. We advise on the best course of action for each case.',
-      link: '/services#action-planning'
-    },
-    {
       icon: Shield,
-      title: 'IPR Enforcement & Anti-Counterfeiting',
-      description: 'Filing anti-infringement FIRs, Cease & Desist Notices and civil/criminal cases anywhere in India.',
-      link: '/services#enforcement'
+      title: 'Brand Protection',
+      description: 'Comprehensive brand protection strategies to safeguard your IP, trademarks, and brand identity against counterfeiting across India.',
+      link: '/services#brand-protection'
+    },
+    {
+      icon: Briefcase,
+      title: 'Corporate Consultancy',
+      description: 'Expert IPR and brand protection consultancy for corporates, helping build robust IP strategies and manage risks.',
+      link: '/services#corporate-consultancy'
+    },
+    {
+      icon: Target,
+      title: 'Pan India Anti-Infringement Raids',
+      description: 'Coordinated anti-infringement raid operations across all states and territories of India.',
+      link: '/services#pan-india-raids'
     },
     {
       icon: Scale,
-      title: 'Post Raid Support',
-      description: 'Complete post-raid follow-up in Police Stations and Courts until case conclusion.',
-      link: '/services#post-raid'
+      title: 'Pan India Anti-Infringement Civil Suits',
+      description: 'Filing and management of civil infringement suits including injunctions, damages, and account of profits anywhere in India.',
+      link: '/services#pan-india-civil-suits'
     },
     {
       icon: FileText,
-      title: 'Regular Monitoring',
-      description: 'Red list management with regular online and offline monitoring of infringers and lookalike brands.',
-      link: '/services#monitoring'
-    },
-    {
-      icon: Users,
-      title: 'Training & Workshops',
-      description: 'Professional training for in-house sales teams, legal counsels, and operational personnel.',
-      link: '/services#training'
+      title: 'Legal Metrology Consultancy',
+      description: 'Specialist consultancy on Legal Metrology laws, compliance, packaging requirements, and protection against violations.',
+      link: '/services#legal-metrology'
     },
     {
       icon: Search,
-      title: 'On-site Patent Investigations',
-      description: 'On-site investigations with evidence procurement and expert testimony in Court for patent infringement cases.',
-      link: '/services#onsite-patent-investigations'
+      title: 'Patent Infringement Ground Investigations',
+      description: 'In-depth ground-level investigations to detect and document patent infringement with admissible evidence.',
+      link: '/services#patent-infringement-investigations'
+    },
+    {
+      icon: Users,
+      title: 'Training & Sensitising Corporate Teams on Brand Protection / IPR',
+      description: 'Specialized training programs to educate corporate teams on brand protection strategies and IPR laws.',
+      link: '/services#corporate-team-training'
+    },
+    {
+      icon: BookOpen,
+      title: 'Lectures on IPR Law at All Levels',
+      description: 'Expert lectures and seminars on IPR law for students, academia, government bodies, and industry.',
+      link: '/services#ipr-lectures'
+    },
+    {
+      icon: Lightbulb,
+      title: 'Legal Advisers and Advocates',
+      description: 'A dedicated team of experienced legal advisers and advocates for comprehensive IPR counsel and representation.',
+      link: '/services#legal-advisers-advocates'
     }
   ]
 
