@@ -7,9 +7,9 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
-          <div className="col-span-1">
+          <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Image
                 src="/logo.jpeg"
@@ -26,27 +26,52 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="md:col-span-2 lg:col-span-2">
             <h3 className="font-semibold mb-4 text-primary-foreground">Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services#trademarks" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Trademark Registration
+                <Link href="/services#brand-protection" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Brand Protection
                 </Link>
               </li>
               <li>
-                <Link href="/services#patents" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Patent Filing
+                <Link href="/services#corporate-consultancy" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Corporate Consultancy
                 </Link>
               </li>
               <li>
-                <Link href="/services#copyrights" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Copyright Protection
+                <Link href="/services#pan-india-raids" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Pan India Anti-Infringement Raids
                 </Link>
               </li>
               <li>
-                <Link href="/services#consulting" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Brand Consulting
+                <Link href="/services#pan-india-civil-suits" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Pan India Anti-Infringement Civil Suits
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#legal-metrology" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Legal Metrology Consultancy
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#patent-infringement-investigations" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Patent Infringement Ground Investigations
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#corporate-team-training" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Training &amp; Sensitising Corporate Teams on IPR
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#ipr-lectures" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Lectures on IPR Law at All Levels
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#legal-advisers-advocates" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Legal Advisers and Advocates
                 </Link>
               </li>
             </ul>
