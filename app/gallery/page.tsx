@@ -44,6 +44,11 @@ export default function Gallery() {
       image: '/images/Punjab Police Event/phillaur1.jpg',
       title: 'Dr. Rishi Kulshresth honoured with a memento at Phillaur Police Academy',
       description: 'Dr. Rishi Kulshresth receiving a memento from senior Punjab Police officers at Phillaur Police Academy, Punjab'
+    },
+    {
+      image: '/images/Punjab Police Event/phillaur2.jpg',
+      title: 'FICCI CASCADE — Capacity Building Programme for Police Officers',
+      description: '"Combating smuggling requires more than seizure operations, it demands stronger legal scrutiny, timely enforcement action, effective search and seizure mechanisms, and rigorous verification of documentation to protect legitimate industry and curb illicit trade at its source." — Dr. Rishi Kulshresth, Advocate, High Court of Delhi'
     }
   ]
 
@@ -190,23 +195,21 @@ export default function Gallery() {
             </div>
 
             {/* Photos */}
-            <div className="grid md:grid-cols-1 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {punjabPoliceEvent.map((item, index) => (
-                <div key={index} className="rounded-2xl overflow-hidden group" style={{border: '2px solid rgba(245,158,11,0.4)', boxShadow: '0 8px 40px rgba(245,158,11,0.18)'}}>
-                  <div className="md:flex">
-                    <div className="relative md:w-1/2 overflow-hidden" style={{height: '420px', background: '#0f172a'}}>
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-contain group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="md:w-1/2 p-8 flex flex-col justify-center" style={{background: 'rgba(255,255,255,0.04)'}}>
-                      <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{color: '#f59e0b'}}>Punjab Police Academy Event</p>
-                      <h3 className="text-xl md:text-2xl font-bold mb-4" style={{color: '#f1f5f9'}}>{item.title}</h3>
-                      <p className="text-base leading-relaxed" style={{color: '#94a3b8'}}>{item.description}</p>
-                    </div>
+                <div key={index} className="rounded-2xl overflow-hidden group flex flex-col" style={{border: '2px solid rgba(245,158,11,0.4)', boxShadow: '0 8px 40px rgba(245,158,11,0.18)'}}>
+                  <div className="relative overflow-hidden" style={{height: '340px', background: '#0f172a'}}>
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col justify-center flex-1" style={{background: 'rgba(255,255,255,0.04)'}}>
+                    <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{color: '#f59e0b'}}>Punjab Police Academy Event</p>
+                    <h3 className="text-lg font-bold mb-3" style={{color: '#f1f5f9'}}>{item.title}</h3>
+                    <p className="text-sm leading-relaxed" style={{color: '#94a3b8'}}>{item.description}</p>
                   </div>
                 </div>
               ))}
