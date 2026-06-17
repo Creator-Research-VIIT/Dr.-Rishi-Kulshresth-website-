@@ -241,6 +241,50 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Latest Highlighted Event Banner */}
+        <section className="py-16 md:py-20" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)'}}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-center mb-6">
+              <span className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase" style={{background: 'linear-gradient(90deg, #f59e0b, #d97706)', color: '#fff', boxShadow: '0 0 20px rgba(245,158,11,0.45)'}}>
+                ★ Latest Highlighted Event ★
+              </span>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden" style={{border: '2px solid rgba(245,158,11,0.35)', boxShadow: '0 8px 40px rgba(245,158,11,0.15)'}}>
+              <div className="md:flex">
+                {/* Photo */}
+                <div className="relative md:w-2/5" style={{height: '320px', background: '#0f172a', flexShrink: 0}}>
+                  <Image
+                    src="/images/Punjab Police Event/phillaur1.jpg"
+                    alt="Punjab Police Phillaur Academy Event"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                {/* Info */}
+                <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center" style={{background: 'rgba(255,255,255,0.05)'}}>
+                  <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{color: '#f59e0b'}}>
+                    📅 June 12, 2026 &nbsp;·&nbsp; 📍 Phillaur Police Academy, Punjab
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{color: '#f1f5f9'}}>
+                    Guiding Senior Punjab Police Officers
+                  </h2>
+                  <p className="text-base leading-relaxed mb-6" style={{color: '#94a3b8'}}>
+                    Dr. Rishi Kulshresth was honoured with an invitation to guide Senior Punjab Police officers, sharing the dias with Spl. DGP Punjab Shri Amardeep Singh Rai (IPS), Additional Home Secretary Shri Ankurjeet Singh (IAS), Secretary Jail Shri Mohammed Tyaab (IAS), Spl. Commissioner Delhi Police Shri Deep Chand Ji (IPS), and Shri Ashish Paul, VP ITC.
+                  </p>
+                  <Link
+                    href="/gallery"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:scale-105 w-fit"
+                    style={{background: 'linear-gradient(90deg, #f59e0b, #d97706)', color: '#fff', boxShadow: '0 4px 16px rgba(245,158,11,0.4)'}}
+                  >
+                    View Full Event in Gallery <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Us */}
         <section className="py-20 md:py-28 section-alternate">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
