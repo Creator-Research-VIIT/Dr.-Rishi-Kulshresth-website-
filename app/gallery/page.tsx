@@ -38,6 +38,15 @@ export default function Gallery() {
     }
   ]
 
+  // Punjab Police Event - Phillaur Police Academy
+  const punjabPoliceEvent = [
+    {
+      image: '/images/Punjab Police Event/phillaur1.jpg',
+      title: 'Dr. Rishi Kulshresth honoured with a memento at Phillaur Police Academy',
+      description: 'Dr. Rishi Kulshresth receiving a memento from senior Punjab Police officers at Phillaur Police Academy, Punjab'
+    }
+  ]
+
   // Lectures
   const lectures = [
     {
@@ -209,6 +218,73 @@ export default function Gallery() {
                     <p className="text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Highlighted Event - Punjab Police Phillaur Academy */}
+        <section className="py-20 md:py-28" style={{background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%)'}}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Highlighted Badge */}
+            <div className="flex justify-center mb-8">
+              <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-bold tracking-widest uppercase" style={{background: 'linear-gradient(90deg, #f59e0b, #d97706)', color: '#fff', boxShadow: '0 0 24px rgba(245,158,11,0.5)'}}>
+                <span>★</span> Highlighted Event <span>★</span>
+              </span>
+            </div>
+
+            <div className="flex items-center gap-4 mb-10">
+              <div className="h-16 w-16 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0" style={{background: 'linear-gradient(135deg, #f59e0b, #b45309)'}}>
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white">Guiding Senior Punjab Police Officers</h2>
+                <p className="mt-1" style={{color: '#fbbf24'}}>Phillaur Police Academy, Punjab — June 12, 2026</p>
+              </div>
+            </div>
+
+            {/* Description Card */}
+            <div className="rounded-2xl p-6 md:p-8 mb-10" style={{background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(245,158,11,0.35)', backdropFilter: 'blur(8px)'}}>
+              <p className="text-lg md:text-xl leading-relaxed" style={{color: '#e2e8f0'}}>
+                <span className="font-bold" style={{color: '#fbbf24'}}>Dr. Rishi Kulshresth</span> was honoured with an invitation to guide Senior Punjab Police officers. He shared the dias with:
+              </p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  'Spl. DGP, Punjab – Shri Amardeep Singh Rai (IPS)',
+                  'Shri Ankurjeet Singh (IAS), Additional Home Secretary, Punjab State',
+                  'Shri Mohammed Tyaab (IAS), Secretary, Jail, Punjab',
+                  'Spl. Police Commissioner, Delhi Police – Shri Deep Chand Ji (IPS)',
+                  'Shri Ashish Paul, VP, ITC'
+                ].map((dignitary, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1 flex-shrink-0 h-2 w-2 rounded-full" style={{background: '#f59e0b', marginTop: '0.5rem'}}></span>
+                    <span style={{color: '#cbd5e1'}}>{dignitary}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 font-semibold" style={{color: '#fbbf24'}}>📅 Event Date: June 12, 2026 &nbsp;|&nbsp; 📍 Phillaur Police Academy, Punjab</p>
+            </div>
+
+            {/* Photos */}
+            <div className="grid md:grid-cols-1 gap-8">
+              {punjabPoliceEvent.map((item, index) => (
+                <div key={index} className="rounded-2xl overflow-hidden group" style={{border: '2px solid rgba(245,158,11,0.4)', boxShadow: '0 8px 40px rgba(245,158,11,0.18)'}}>
+                  <div className="md:flex">
+                    <div className="relative md:w-1/2 overflow-hidden" style={{height: '420px', background: '#0f172a'}}>
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-contain group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="md:w-1/2 p-8 flex flex-col justify-center" style={{background: 'rgba(255,255,255,0.04)'}}>
+                      <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{color: '#f59e0b'}}>Punjab Police Academy Event</p>
+                      <h3 className="text-xl md:text-2xl font-bold mb-4" style={{color: '#f1f5f9'}}>{item.title}</h3>
+                      <p className="text-base leading-relaxed" style={{color: '#94a3b8'}}>{item.description}</p>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
