@@ -81,11 +81,11 @@ export default function Contact() {
       icon: MapPin,
       title: 'Office Address',
       details: [
-        'Dr. Rishi Kulshresth & Associates',
-        'B-123, Intellectual Property Tower',
-        'Connaught Place, New Delhi - 110001',
-        'India'
-      ]
+  'Dr. Rishi Kulshresth',
+  '307, D Parsavnath Majestic Floors,',
+  'Opp. North India Mall, Indirapuram,',
+  'Delhi NCR'
+]
     },
     {
       icon: Phone,
@@ -112,26 +112,7 @@ export default function Contact() {
     }
   ]
 
-  const locations = [
-    {
-      city: 'New Delhi',
-      type: 'Head Office',
-      address: 'B-123, IP Tower, Connaught Place',
-      phone: '+91 99998 53567'
-    },
-    {
-      city: 'Mumbai',
-      type: 'Branch Office',
-      address: 'A-456, Business Hub, Nariman Point',
-      phone: '+91 22 2345 6789'
-    },
-    {
-      city: 'Bangalore',
-      type: 'Branch Office',
-      address: 'C-789, Tech Park, Electronic City',
-      phone: '+91 80 3456 7890'
-    }
-  ]
+  
 
   return (
     <>
@@ -297,45 +278,7 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Office Locations */}
-        <section className="py-20 md:py-28 section-alternate">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Our Locations
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Visit us at any of our office locations across India
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {locations.map((location, index) => (
-                <Card key={index} className="text-center border border-border bg-card shadow-sm hover:shadow-md transition-shadow">
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-full bg-muted border-2 border-primary/20 flex items-center justify-center mx-auto mb-4">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl">{location.city}</CardTitle>
-                    <CardDescription className="text-secondary font-semibold">
-                      {location.type}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2 text-muted-foreground">
-                      <p>{location.address}</p>
-                      <div className="flex items-center justify-center gap-2 text-sm font-medium text-secondary pt-2">
-                        <Phone className="h-4 w-4" />
-                        <span>{location.phone}</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
+        
         {/* Map Section */}
         <section className="py-20 md:py-28 section-light">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -356,8 +299,8 @@ export default function Contact() {
                     Interactive map will be embedded here
                   </p>
                   <p className="text-sm text-muted-foreground mt-2">
-                    B-123, IP Tower, Connaught Place, New Delhi - 110001
-                  </p>
+  307, D Parsavnath Majestic Floors, Opp. North India Mall, Indirapuram, Delhi NCR
+</p>
                 </div>
               </div>
             </Card>
