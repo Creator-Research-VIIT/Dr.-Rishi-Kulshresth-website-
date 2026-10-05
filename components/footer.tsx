@@ -134,7 +134,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-primary-foreground/80">
-                New Delhi, India
+                Delhi NCR, India
               </li>
             </ul>
           </div>
