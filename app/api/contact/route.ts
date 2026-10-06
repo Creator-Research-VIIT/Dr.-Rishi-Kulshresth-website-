@@ -1,79 +1,59 @@
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
+
+const escapeHtml = (s: string) =>
+  String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     const { name, email, phone, subject, message } = body
 
-    // Validate required fields
     if (!name || !email || !subject || !message) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
+    }
+
+    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO } = process.env
+    if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !CONTACT_TO) {
+      console.error('Contact form: email settings are missing in environment variables')
       return NextResponse.json(
-        { error: 'Invalid email address' },
-        { status: 400 }
+        { error: 'Message service is not available right now. Please try again later.' },
+        { status: 500 }
       )
     }
 
-    // Here you would typically send an email using a service like:
-    // - Nodemailer
-    // - SendGrid
-    // - AWS SES
-    // - Resend
-    // - Mailgun
-    
-    // For now, we'll log the data and simulate successful submission
-    console.log('Contact form submission:', {
-      name,
-      email,
-      phone,
-      subject,
-      message,
-      timestamp: new Date().toISOString()
-    })
-
-    // In production, you would send an email here
-    // Example with nodemailer (you'd need to install it):
-    /*
-    const nodemailer = require('nodemailer')
-    
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
+      host: SMTP_HOST,
+      port: Number(SMTP_PORT),
       secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
+      auth: { user: SMTP_USER, pass: SMTP_PASS },
     })
 
     await transporter.sendMail({
-      from: process.env.SMTP_FROM,
-      to: 'info@drrishikulshresth.com',
+      from: `"Website Contact Form" <${SMTP_USER}>`,
+      to: CONTACT_TO,
+      replyTo: email,
       subject: `Contact Form: ${subject}`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(phone || 'Not provided')}</p>
+        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
         <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
       `,
     })
-    */
 
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Your message has been sent successfully. We will get back to you within 24 hours.' 
+      {
+        success: true,
+        message: 'Your message has been sent successfully. We will get back to you within 24 hours.',
       },
       { status: 200 }
     )

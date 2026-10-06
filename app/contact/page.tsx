@@ -3,7 +3,7 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { useState } from 'react'
-import { Mail, MapPin, Phone, Clock, Send } from 'lucide-react'
+import { Mail, MapPin, Phone, Clock, Send, Building2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -86,6 +86,15 @@ export default function Contact() {
   'Opp. North India Mall, Indirapuram,',
   'Delhi NCR'
 ]
+    },
+      {
+      icon: Building2,
+      title: 'Chambers',
+      details: [
+        'D-202, Karkardooma Court',
+        'Ghaziabad Court',
+        'Bar Consultancy Room, Delhi High Court'
+      ]
     },
     {
       icon: Phone,
@@ -183,7 +192,7 @@ export default function Contact() {
                           type="tel"
                           value={formData.phone}
                           onChange={handleChange}
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 "
                           className="border-border"
                         />
                       </div>
